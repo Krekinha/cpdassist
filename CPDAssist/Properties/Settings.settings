@@ -1,0 +1,39 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CPDAssist.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="seqMDFe" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="pathXMLFabrica" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\krekm\Desktop\Fabrica</Value>
+    </Setting>
+    <Setting Name="PathMDFe" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\krekm\Desktop\MDFE\</Value>
+    </Setting>
+    <Setting Name="verProc" Type="System.String" Scope="User">
+      <Value Profile="(Default)">3.0.14</Value>
+    </Setting>
+    <Setting Name="verLayout" Type="System.String" Scope="User">
+      <Value Profile="(Default)">3.00</Value>
+    </Setting>
+    <Setting Name="modeloDoc" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">58</Value>
+    </Setting>
+    <Setting Name="serieDoc" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="tipoEmissao" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="tipoEmitente" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="tipoAmbiente" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="pathAverbacao" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\krekm\Desktop\AVERBACAO</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

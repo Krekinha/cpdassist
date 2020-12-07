@@ -1,0 +1,13 @@
+﻿<Window x:Class="CPDAssist.CCNPJ.conSintegra"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CPDAssist.CCNPJ"
+        mc:Ignorable="d"
+        Title="conSintegra" Height="543.306" Width="733.858" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <WebBrowser x:Name="webBrowser1" Margin="5" LoadCompleted="webBrowser1_LoadCompleted"/>
+
+    </Grid>
+</Window>

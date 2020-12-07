@@ -1,0 +1,896 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:CPDAssit"
+                     xmlns:tool="clr-namespace:CPDAssit.Tools"
+                    xmlns:MDFe="clr-namespace:CPDAssist.MDFe"
+                    x:Class="CPDAssit.Resources.dicBNM">
+
+    <!-- Converters -->
+    <tool:ContentToMarginConverter x:Key="ContentToMarginConverter"/>
+    <tool:ContentToPathConverter x:Key="ContentToPathConverter"/>
+    <!-- Cores do Tema -->
+    <SolidColorBrush x:Key="BtBrush" Color="sc#0.5, 0.479320168, 0.0612460524, 0.0343398079" />
+    <SolidColorBrush x:Key="tester" Color="#FFEC3535"/>
+    <SolidColorBrush x:Key="Borda" Color="#FF515151"/>
+    <SolidColorBrush x:Key="Fundo" Color="#FF333333"/>
+    <SolidColorBrush x:Key="TextoEnabled" Color="#BFFFFFFF"/>
+    <SolidColorBrush x:Key="TextoDisabled" Color="#FF6D6D6D"/>
+    <SolidColorBrush x:Key="TextoSelecionado" Color="#FFFF8800"/>
+    <SolidColorBrush x:Key="Focus" Color="#FFF78A09"/>
+    <SolidColorBrush x:Key="TextoResumoHistorico" Color="#FF360CBB"/>
+    <SolidColorBrush x:Key="TbiBorder" Color="#FF554B3D"/>
+    <SolidColorBrush x:Key="TbiFundo" Color="#FFD8D6D6"/>
+    <SolidColorBrush x:Key="TbiHover" Color="#FFFF4500"/>
+    <SolidColorBrush x:Key="TbiSelected" Color="#FFD8D6D6"/>
+    <SolidColorBrush x:Key="TabControlFillBrush" Color="#FF3C3C3C"/>
+    <SolidColorBrush x:Key="TextUnselectedBrush" Color="#FFD8D6D6"/>
+    <SolidColorBrush x:Key="Brush1" Color="#2B000000" />
+    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Transparent" />
+    <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="Transparent" />
+
+    <!-- Gradient -->
+    
+    <LinearGradientBrush x:Key="TabUnselectedFillBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="Gray"/>
+        <GradientStop Color="#FF414141" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="TabSelectedFillBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="Gray"/>
+        <GradientStop Color="Red" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="TabUnselectedStrokeBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FF353535"/>
+        <GradientStop Color="#FF252525" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="HeaderBrush" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#FF6B8E95" Offset="0"/>
+        <GradientStop Color="#FF14A7C1" Offset="1"/>
+        <GradientStop Color="#FF1E424E" Offset="0.509"/>
+        <GradientStop Color="#FF1D4855" Offset="0.542"/>
+        <GradientStop Color="#FF1D4855" Offset="0.542"/>
+        <GradientStop Color="#FF193A44" Offset="0.526"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="HeaderBorderBrush" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#FF1D1D1D" Offset="0.614"/>
+        <GradientStop Color="#FF007F96" Offset="0.853"/>
+        <GradientStop Color="#FF0AEAFA" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="CyanThemeBG" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFC6ECFE"/>
+        <GradientStop Color="#FF003FFF" Offset="1"/>
+        <GradientStop Color="#FF37AFF9" Offset="0.5"/>
+        <GradientStop Color="#FF0076DB" Offset="0.5"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="MagentaBG" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFFFCFFB" Offset="0"/>
+        <GradientStop Color="#FF930E2F" Offset="1"/>
+        <GradientStop Color="#FFFF659D" Offset="0.5"/>
+        <GradientStop Color="#FFC7174B" Offset="0.5"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="BlackBG" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFE5E7FA"/>
+        <GradientStop Color="#FF747C8D" Offset="0.5"/>
+        <GradientStop Color="#FF000000" Offset="0.5"/>
+        <GradientStop Color="#FF0F0F0F" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="LightBG" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFE5E7FA"/>
+        <GradientStop Color="#FFE3E6F5" Offset="0.5"/>
+        <GradientStop Color="#FFD5DBF1" Offset="0.5"/>
+        <GradientStop Color="#FFE1E4FF" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="TealGreen" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFE3FCA9" Offset="0"/>
+        <GradientStop Color="#FF82B03C" Offset="1"/>
+        <GradientStop Color="#FFD8FA6C" Offset="0.5"/>
+        <GradientStop Color="#FFE0FF98" Offset="0.5"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="CyanLargeBG" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FF003FFF" Offset="1"/>
+        <GradientStop Color="#FF37AFF9" Offset="0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="MagentaLargeBG" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FF930E2F" Offset="1"/>
+        <GradientStop Color="#FFFF659D" Offset="0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="LightLargeBG" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFE3E6F5" Offset="0"/>
+        <GradientStop Color="#FF9D9D9D" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="GreenLargeBG" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FF82B03C" Offset="1"/>
+        <GradientStop Color="#FFD8FA6C" Offset="0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="PurpleBG" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFB0B8FF"/>
+        <GradientStop Color="#FF747C8D" Offset="0.5"/>
+        <GradientStop Color="#FF000000" Offset="0.5"/>
+        <GradientStop Color="#FF151733" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="DarkGreen" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFB0FFC4"/>
+        <GradientStop Color="#FF5D645F" Offset="0.5"/>
+        <GradientStop Color="#FF000000" Offset="0.5"/>
+        <GradientStop Color="#FF15331F" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="DarkYellow" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFF3FFB0"/>
+        <GradientStop Color="#FF63645D" Offset="0.5"/>
+        <GradientStop Color="#FF000000" Offset="0.5"/>
+        <GradientStop Color="#FF2F3315" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="DarkGrape" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFFFB0FD"/>
+        <GradientStop Color="#FF8D7485" Offset="0.5"/>
+        <GradientStop Color="#FF000000" Offset="0.5"/>
+        <GradientStop Color="#FF331532" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="DarkBrown" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFFFEAB0"/>
+        <GradientStop Color="#FF8D8774" Offset="0.5"/>
+        <GradientStop Color="#FF000000" Offset="0.5"/>
+        <GradientStop Color="#FF332A15" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="LiteBlue" EndPoint="0.5,0" StartPoint="0.5,1">
+        <GradientStop Color="#FF00E8FF" Offset="1"/>
+        <GradientStop Color="#FF218DBC"/>
+    </LinearGradientBrush>
+
+    <!-- Graphics -->
+
+    <DrawingBrush x:Key="editcopy" Stretch="Uniform">
+        <DrawingBrush.Drawing>
+            <DrawingGroup>
+                <DrawingGroup>
+                    <DrawingGroup Transform="1.00150799751282,0,0,1.00061595439911,-0.0500220470130444,-0.0630489513278008">
+                        <GeometryDrawing Brush="{StaticResource Brush1}" Geometry="M20.162,34.033L33.162,34.033 33.162,36.033 20.162,36.033z" />
+                        <GeometryDrawing Geometry="M1.548,2.129C1.548,1.816,1.802,1.563,2.114,1.563L31.934,1.563C32.247,1.563,32.500,1.816,32.500,2.129L32.500,36.973C32.500,37.286,32.247,37.540,31.934,37.540L2.114,37.540C1.802,37.540,1.548,37.286,1.548,36.973z">
+                            <GeometryDrawing.Brush>
+                                <LinearGradientBrush StartPoint="14.726,13.365" EndPoint="29.089,33.617" MappingMode="Absolute" SpreadMethod="Pad">
+                                    <GradientStop Color="#FFF0F0EF" Offset="0" />
+                                    <GradientStop Color="#FFE8E8E8" Offset="0.599" />
+                                    <GradientStop Color="White" Offset="0.828" />
+                                    <GradientStop Color="#FFD8D8D3" Offset="1" />
+                                </LinearGradientBrush>
+                            </GeometryDrawing.Brush>
+                            <GeometryDrawing.Pen>
+                                <Pen Brush="#FF888A85" Thickness="0.999" />
+                            </GeometryDrawing.Pen>
+                        </GeometryDrawing>
+                        <GeometryDrawing Geometry="M2.533,2.561L31.503,2.561 31.503,36.542 2.533,36.542z">
+                            <GeometryDrawing.Pen>
+                                <Pen Thickness="0.999">
+                                    <Pen.Brush>
+                                        <LinearGradientBrush StartPoint="16.534,19.196" EndPoint="21.262,34.48" MappingMode="Absolute" SpreadMethod="Pad">
+                                            <GradientStop Color="White" Offset="0" />
+                                            <GradientStop Color="Transparent" Offset="1" />
+                                        </LinearGradientBrush>
+                                    </Pen.Brush>
+                                </Pen>
+                            </GeometryDrawing.Pen>
+                        </GeometryDrawing>
+                        <GeometryDrawing Brush="{StaticResource Brush1}" Geometry="M7.016,10.033L28.016,10.033 28.016,12.033 7.016,12.033z" />
+                        <GeometryDrawing Brush="{StaticResource Brush1}" Geometry="M7.016,14.033L27.016,14.033 27.016,16.033 7.016,16.033z" />
+                        <GeometryDrawing Brush="{StaticResource Brush1}" Geometry="M7.016,18.033L25.016,18.033 25.016,20.033 7.016,20.033z" />
+                        <GeometryDrawing Brush="{StaticResource Brush1}" Geometry="M7.016,22.033L28.016,22.033 28.016,24.033 7.016,24.033z" />
+                        <GeometryDrawing Brush="{StaticResource Brush1}" Geometry="M7.016,26.033L20.016,26.033 20.016,28.033 7.016,28.033z" />
+                    </DrawingGroup>
+                    <DrawingGroup>
+                        <GeometryDrawing Geometry="F1M15.073,10.501L44.929,10.501C45.245,10.501,45.499,10.754,45.499,11.068L45.499,38.236C45.499,40.712,38.619,46.539,36.231,46.539L15.073,46.539C14.757,46.539,14.503,46.286,14.503,45.971L14.503,11.068C14.503,10.754,14.757,10.501,15.073,10.501z">
+                            <GeometryDrawing.Brush>
+                                <LinearGradientBrush StartPoint="28.2,22.824" EndPoint="42.583,43.11" MappingMode="Absolute" SpreadMethod="Pad">
+                                    <GradientStop Color="#FFF0F0EF" Offset="0" />
+                                    <GradientStop Color="#FFE8E8E8" Offset="0.599" />
+                                    <GradientStop Color="White" Offset="0.828" />
+                                    <GradientStop Color="#FFD8D8D3" Offset="1" />
+                                </LinearGradientBrush>
+                            </GeometryDrawing.Brush>
+                            <GeometryDrawing.Pen>
+                                <Pen Brush="#FF888A85" Thickness="1" MiterLimit="4" />
+                            </GeometryDrawing.Pen>
+                        </GeometryDrawing>
+                        <GeometryDrawing Geometry="M15.503,11.500L44.500,11.500 44.500,45.541 15.503,45.541z">
+                            <GeometryDrawing.Pen>
+                                <Pen Thickness="1">
+                                    <Pen.Brush>
+                                        <LinearGradientBrush StartPoint="16.549,19.23" EndPoint="21.282,34.541" MappingMode="Absolute" SpreadMethod="Pad">
+                                            <GradientStop Color="White" Offset="0" />
+                                            <GradientStop Color="Transparent" Offset="1" />
+                                        </LinearGradientBrush>
+                                    </Pen.Brush>
+                                </Pen>
+                            </GeometryDrawing.Pen>
+                        </GeometryDrawing>
+                        <GeometryDrawing Geometry="F1M36.221,46.537C38.251,46.867 45.810,42.007 45.505,38.039 43.942,40.462 40.747,39.326 36.638,39.485 36.638,39.485 37.033,46.037 36.221,46.537z">
+                            <GeometryDrawing.Brush>
+                                <LinearGradientBrush StartPoint="42.158,44.492" EndPoint="39.827,41.804" MappingMode="Absolute" SpreadMethod="Pad">
+                                    <GradientStop Color="#FF7C7C7C" Offset="0" />
+                                    <GradientStop Color="#FFB8B8B8" Offset="1" />
+                                </LinearGradientBrush>
+                            </GeometryDrawing.Brush>
+                            <GeometryDrawing.Pen>
+                                <Pen Brush="#FF868A84" Thickness="1" MiterLimit="4" />
+                            </GeometryDrawing.Pen>
+                        </GeometryDrawing>
+                        <GeometryDrawing Geometry="F1M37.671,44.345C39.041,43.662 42.100,42.199 43.399,40.318 41.803,40.998 40.451,40.527 37.697,40.508 37.697,40.508 37.859,43.570 37.671,44.345z">
+                            <GeometryDrawing.Pen>
+                                <Pen Thickness="1" MiterLimit="4">
+                                    <Pen.Brush>
+                                        <LinearGradientBrush StartPoint="39.558,40.58" EndPoint="40.332,41.729" MappingMode="Absolute" SpreadMethod="Pad">
+                                            <GradientStop Color="White" Offset="0" />
+                                            <GradientStop Color="Transparent" Offset="1" />
+                                        </LinearGradientBrush>
+                                    </Pen.Brush>
+                                </Pen>
+                            </GeometryDrawing.Pen>
+                        </GeometryDrawing>
+                        <GeometryDrawing Brush="{StaticResource Brush1}" Geometry="M20.000,19.033L41.000,19.033 41.000,21.033 20.000,21.033z" />
+                        <GeometryDrawing Brush="{StaticResource Brush1}" Geometry="M20.000,23.033L39.992,23.033 39.992,25.033 20.000,25.033z" />
+                        <GeometryDrawing Brush="{StaticResource Brush1}" Geometry="M20.000,27.033L37.977,27.033 37.977,29.033 20.000,29.033z" />
+                        <GeometryDrawing Brush="{StaticResource Brush1}" Geometry="M20.000,31.033L41.000,31.033 41.000,33.033 20.000,33.033z" />
+                    </DrawingGroup>
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="copy" Stretch="Uniform">
+        <DrawingBrush.Drawing>
+            <DrawingGroup>
+
+                <DrawingGroup OpacityMask="#FFCFCFCF">
+
+                    <!-- Layer 1/<Path> -->
+                    <GeometryDrawing Brush="#FF2D2D30" Geometry="F1 M 10.000,0.000 L 4.000,0.000 L 4.000,3.000 L 0.000,3.000 L 0.000,14.000 L 10.000,14.000 L 10.000,11.000 L 14.000,11.000 L 14.000,4.000 L 10.000,0.000 Z"/>
+
+                    <!-- Layer 1/<Compound Path> -->
+                    <GeometryDrawing Brush="White" Geometry="F1 M 8.000,7.000 L 6.000,7.000 L 6.000,5.000 L 5.000,5.000 L 2.000,5.000 L 2.000,12.000 L 8.000,12.000 L 8.000,8.000 L 8.000,7.000 Z M 9.000,7.000 L 9.000,13.000 L 1.000,13.000 L 1.000,4.000 L 6.000,4.000 L 9.000,7.000 Z M 13.000,10.000 L 10.000,10.000 L 10.000,9.000 L 12.000,9.000 L 12.000,5.000 L 12.000,4.000 L 10.000,4.000 L 10.000,2.000 L 9.000,2.000 L 6.000,2.000 L 6.000,3.000 L 5.000,3.000 L 5.000,1.000 L 10.000,1.000 L 13.000,4.000 L 13.000,10.000 Z"/>
+
+                    <!-- Layer 1/<Compound Path> -->
+                    <GeometryDrawing Brush="#FF2D2D30" Geometry="F1 M 8.000,7.000 L 6.000,7.000 L 6.000,5.000 L 2.000,5.000 L 2.000,12.000 L 8.000,12.000 L 8.000,7.000 Z M 6.000,3.000 L 6.000,3.000 L 6.000,2.000 L 10.000,2.000 L 10.000,4.000 L 12.000,4.000 L 12.000,9.000 L 10.000,9.000 L 10.000,6.000 L 6.000,3.000 Z"/>
+
+                </DrawingGroup>
+            </DrawingGroup>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="delete" Stretch="Uniform">
+        <DrawingBrush.Drawing>
+            <DrawingGroup>
+                <DrawingGroup.Children>
+                    <GeometryDrawing Brush="#FFF6F6F6" Geometry="F1M2.6934,10.0322C2.2204,10.0322 1.7754,9.8462 1.4384,9.5112 1.0994,9.1722 0.9134,8.7252 0.9144,8.2532 0.9144,7.7802 1.1004,7.3342 1.4384,6.9982L3.6634,5.0642 2.5664,4.0542C2.1964,3.6862 2.0114,3.2382 2.0134,2.7652 2.0154,2.2942 2.2084,1.8352 2.5434,1.5072 2.8604,1.1892 3.3244,1.0042 3.8114,1.0042 4.3094,1.0042 4.7744,1.2042 5.0874,1.5532L6.1324,2.9322 8.6274,1.0002 11.5994,1.0002 8.0484,5.1092 12.0004,10.0272 9.1434,10.0272 6.0254,7.2952 3.9734,9.4862C3.6104,9.8472,3.1644,10.0322,2.6934,10.0322" />
+                    <GeometryDrawing Brush="#FFA1250C" Geometry="F1M9.9141,9.0273L9.5191,9.0273 5.9571,5.9043 3.2441,8.8023C2.9351,9.1083 2.4511,9.1083 2.1441,8.8023 1.8371,8.4963 1.8371,8.0113 2.1441,7.7063L5.1641,5.0863 3.2441,3.3183C2.9101,2.9843 2.9641,2.4943 3.2441,2.2203 3.5111,1.9523 4.0661,1.9123 4.3411,2.2203L5.9471,4.3413 8.9691,2.0003 9.4141,2.0003 6.7481,5.0863z" />
+                </DrawingGroup.Children>
+            </DrawingGroup>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+
+    <!-- Templates -->
+
+    <ControlTemplate x:Key="BotaoFechar" TargetType="{x:Type Button}">
+        <Grid x:Name="Button" Background="Transparent">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="MouseOver">
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="HoverState" Storyboard.TargetProperty="Opacity" Duration="0" To="1" />
+                            <ColorAnimation Storyboard.TargetName="Path" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Duration="0" To="#FFCACACA" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="PressedState" Storyboard.TargetProperty="Opacity" Duration="0" To="1" />
+                            <ColorAnimation Storyboard.TargetName="Path" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Duration="0" To="#FF828282"/>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="Path" Storyboard.TargetProperty="Opacity" Duration="0" To="0.5" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+            <Border x:Name="HoverState" Background="#FF333333" BorderBrush="#FF515151" BorderThickness="1" Opacity="0" />
+            <Border x:Name="PressedState" Background="#FF3C3C3C" BorderBrush="#FF515151" BorderThickness="1" Opacity="0" />
+            <Grid x:Name="Glyph" Width="7" Height="7">
+                <Path x:Name="Path" Stretch="Fill" Fill="#FFCACACA" Data="F1 M 375,309L 376,309L 379,312L 382,309L 383,309L 383,310L 380,313L 383,316L 383,317L 382,317L 379,314L 376,317L 375,317L 375,316L 378,313L 375,310L 375,309 Z " />
+            </Grid>
+        </Grid>
+    </ControlTemplate>
+    <ControlTemplate x:Key="BotaoMaximizar" TargetType="{x:Type Button}">
+        <Grid x:Name="Button" Background="Transparent">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="MouseOver">
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="HoverState" Storyboard.TargetProperty="Opacity" Duration="0" To="1" />
+                            <ColorAnimation Storyboard.TargetName="Path" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Duration="0" To="#FFCACACA" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="PressedState" Storyboard.TargetProperty="Opacity" Duration="0" To="1" />
+                            <ColorAnimation Storyboard.TargetName="Path" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Duration="0" To="#FF828282"/>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="Path" Storyboard.TargetProperty="Opacity" Duration="0" To="0.5" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+            <Border x:Name="HoverState" Background="#FF333333" BorderBrush="#FF515151" BorderThickness="1" Opacity="0" />
+            <Border x:Name="PressedState" Background="#FF3C3C3C" BorderBrush="#FF515151" BorderThickness="1" Opacity="0"/>
+            <Grid x:Name="Glyph" Width="9" Height="7">
+                <Path x:Name="Path" Stretch="Fill" Fill="#FFCACACA" Data="F1 M 352,311L 361,311L 361,318L 352,318L 352,311 Z M 353,313L 353,317L 360,317L 360,313L 353,313 Z "/>
+            </Grid>
+        </Grid>
+    </ControlTemplate>
+    <ControlTemplate x:Key="BotaoMinimizar" TargetType="{x:Type Button}">
+        <Grid x:Name="Button" Background="Transparent">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="MouseOver">
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="HoverState" Storyboard.TargetProperty="Opacity" Duration="0" To="1" />
+                            <ColorAnimation Storyboard.TargetName="Path" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Duration="0" To="#FFCACACA" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="PressedState" Storyboard.TargetProperty="Opacity" Duration="0" To="1" />
+                            <ColorAnimation Storyboard.TargetName="Path" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Duration="0" To="#FF828282" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="Path" Storyboard.TargetProperty="Opacity" Duration="0" To="0.5" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+            <Border x:Name="HoverState" Background="#FF333333" BorderBrush="#FF515151" BorderThickness="1" Opacity="0"/>
+            <Border x:Name="PressedState" Background="#FF3C3C3C" BorderBrush="#FF515151" BorderThickness="1" Opacity="0" />
+            <Grid x:Name="Glyph" Width="7" Height="2" Margin="0,0,0,-5">
+                <Rectangle x:Name="Path" Stretch="Fill" Fill="#FFCACACA" />
+            </Grid>
+        </Grid>
+    </ControlTemplate>
+    <Style x:Key="BlackWindowBorder" TargetType="{x:Type Border}">
+        <Setter Property="CornerRadius" Value="2, 2, 0, 0" />
+        <Setter Property="Background" Value="#FF333333"/>
+        <Setter Property="BorderBrush" Value="#FF111111" />
+        <Setter Property="BorderThickness" Value="1.5" />
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="VerticalAlignment" Value="Stretch" />
+    </Style>
+    <ControlTemplate x:Key="BlackWindowTemplate" TargetType="{x:Type Window}">
+        <Grid>
+            <Border x:Name="MacWindowFrame" Style="{StaticResource BlackWindowBorder}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <!-- The title bar. -->
+                    <Border Background="#FF333333" MouseLeftButtonDown="titleBar_MouseLeftButtonDown" Padding="0,0,0,0" CornerRadius="2, 2, 0, 0"/>
+                    <!--Padding="10,15,10,15"-->
+                    <StackPanel Orientation="Horizontal" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Stretch">
+                        <Image Stretch="Fill" Margin="0,0,4,0" Source="{TemplateBinding Icon}" MaxWidth="21" MaxHeight="21" />
+                        <TextBlock TextTrimming="WordEllipsis" Foreground="#BFFFFFFF" VerticalAlignment="Center" 
+							FontWeight="Bold" Text="{TemplateBinding Title}" HorizontalAlignment="Left" IsHitTestVisible="False" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Stretch">
+                        <Button Click="minimizeButton_Click" Width="21" Height="21" Focusable="False" Template="{DynamicResource BotaoMinimizar}" />
+                        <Button Click="maximizeButton_Click" Width="21" Height="21" Focusable="False" Template="{DynamicResource BotaoMaximizar}" IsEnabled="False"/>
+                        <Button Click="closeButton_Click" Width="21" Height="21" Focusable="False" Margin="0,0,5,0" Template="{DynamicResource BotaoFechar}" />
+                    </StackPanel>
+                    <!-- The window content. -->
+                    <Border Grid.Row="1">
+                        <AdornerDecorator>
+                            <ContentPresenter />
+                        </AdornerDecorator>
+                    </Border>
+                </Grid>
+            </Border>
+        </Grid>
+    </ControlTemplate>
+    <ControlTemplate x:Key="BlackLoginTemplate" TargetType="{x:Type Window}">
+        <Grid>
+            <Border CornerRadius="2, 2, 0, 0" Background="#FF54545C" BorderBrush="#FF111111" BorderThickness="1.5">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <!-- The title bar. -->
+                    <Border Background="Gray" MouseLeftButtonDown="titleBar_MouseLeftButtonDown" Padding="10,15,10,15" CornerRadius="2, 2, 0, 0"/>
+                    <!--Padding="10,15,10,15"-->
+                    <StackPanel Orientation="Horizontal" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Stretch">
+                        <Image Stretch="Fill" Margin="5,0,4,0" Source="{TemplateBinding Icon}" MaxWidth="21" MaxHeight="21" />
+                        <TextBlock TextTrimming="WordEllipsis" Foreground="#BFFFFFFF" VerticalAlignment="Center" Margin="10,0,0,0" 
+							FontWeight="Bold" Text="{TemplateBinding Title}" HorizontalAlignment="Left" IsHitTestVisible="False" TextAlignment="Center" />
+                    </StackPanel>
+                    <!-- The window content. -->
+                    <Border Grid.Row="1">
+                        <AdornerDecorator>
+                            <ContentPresenter />
+                        </AdornerDecorator>
+                    </Border>
+                </Grid>
+            </Border>
+        </Grid>
+    </ControlTemplate>
+    <ControlTemplate x:Key="BlackListBoxItemButton" TargetType="{x:Type Button}">
+        <Grid >
+            <TextBlock x:Name="Content" Text="X" HorizontalAlignment="Center" VerticalAlignment="Center"
+				Foreground="{StaticResource TextoEnabled}"/>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="Content" Property="Foreground" Value="Green"/>
+            </Trigger>
+            <Trigger Property="IsFocused" Value="True">
+                <Setter TargetName="Content" Property="Foreground" Value="Red"/>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter TargetName="Content" Property="Foreground" Value="Blue"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <ControlTemplate x:Key="ButtonControlTemplate1" TargetType="{x:Type Button}">
+        <Grid Background="{StaticResource copy}">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <Storyboard>
+                            <ColorAnimation To="Transparent" Storyboard.TargetName="BgBrush" Storyboard.TargetProperty="Color" Duration="0:0:0.00"/>
+                            <ColorAnimation To="#FF515151" Storyboard.TargetName="BrBrush" Storyboard.TargetProperty="Color" Duration="0:0:0.00" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="MouseOver">
+                        <Storyboard>
+                            <ColorAnimation To="{Binding BrBrush}" Storyboard.TargetName="BgBrush" Storyboard.TargetProperty="Color" Duration="0:0:0.00"/>
+                            <ColorAnimation To="{Binding BgBrush}" Storyboard.TargetName="BrBrush" Storyboard.TargetProperty="Color" Duration="0:0:0.00" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <Storyboard>
+                            <ColorAnimation To="sc#0.35, 0.045186203, 0.610495567, 0.5647115" Storyboard.TargetName="BgBrush" Storyboard.TargetProperty="Color" Duration="0:0:0.00"/>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Disabled">
+                        <Storyboard>
+                            <ColorAnimation To="Transparent" Storyboard.TargetName="BgBrush" Storyboard.TargetProperty="Color" Duration="0:0:0.00"/>
+                            <ColorAnimation To="#FF3C3C3C" Storyboard.TargetName="BrBrush" Storyboard.TargetProperty="Color" Duration="0:0:0.00" />
+                            <ColorAnimation To="#FF515151" Storyboard.TargetName="Chrome" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Duration="0:0:0.00" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+                <VisualStateGroup x:Name="FocusStates">
+                    <VisualState x:Name="Focused"/>
+                    <VisualState x:Name="Unfocused"/>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+            <Border x:Name="Chrome" TextBlock.Foreground="{TemplateBinding Foreground}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true" Width="20">
+                <Border.BorderBrush>
+                    <SolidColorBrush x:Name="BrBrush" Color="sc#0, 0.08228271, 0.08228271, 0.08228272" />
+                </Border.BorderBrush>
+                <Border.Background>
+                    <SolidColorBrush x:Name="BgBrush" Color="sc#0.25, 0.045186203, 0.610495567, 0.5647115" />
+                </Border.Background>
+                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+					Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" 
+					SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+					VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+            </Border>
+        </Grid>
+    </ControlTemplate>
+
+    <!-- Styles -->
+
+    <Style x:Key="BlackButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <Storyboard>
+                                        <ColorAnimation To="Transparent" Storyboard.TargetName="BgBrush" Storyboard.TargetProperty="Color" Duration="0:0:0.00"/>
+                                        <ColorAnimation To="#FF515151" Storyboard.TargetName="BrBrush" Storyboard.TargetProperty="Color" Duration="0:0:0.00" />
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <ColorAnimation To="#FF515151" Storyboard.TargetName="BgBrush" Storyboard.TargetProperty="Color" Duration="0:0:0.00"/>
+                                        <ColorAnimation To="#FF515151" Storyboard.TargetName="BrBrush" Storyboard.TargetProperty="Color" Duration="0:0:0.00" />
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <ColorAnimation To="#FF515151" Storyboard.TargetName="BgBrush" Storyboard.TargetProperty="Color" Duration="0:0:0.00"/>
+                                        <ColorAnimation To="Transparent" Storyboard.TargetName="BrBrush" Storyboard.TargetProperty="Color" Duration="0:0:0.00" />
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <ColorAnimation To="Transparent" Storyboard.TargetName="BgBrush" Storyboard.TargetProperty="Color" Duration="0:0:0.00"/>
+                                        <ColorAnimation To="#FF3C3C3C" Storyboard.TargetName="BrBrush" Storyboard.TargetProperty="Color" Duration="0:0:0.00" />
+                                        <ColorAnimation To="#FF515151" Storyboard.TargetName="Chrome" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" Duration="0:0:0.00" />
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="FocusStates">
+                                <VisualState x:Name="Focused">
+                                    <Storyboard>
+                                        <ColorAnimation To="Transparent" Storyboard.TargetName="BgBrush" Storyboard.TargetProperty="Color" Duration="0:0:0.00"/>
+                                        <ColorAnimation To="#FFF78A09" Storyboard.TargetName="BrBrush" Storyboard.TargetProperty="Color" Duration="0:0:0.00" />
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Unfocused"/>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Border x:Name="Chrome" TextBlock.Foreground="{TemplateBinding Foreground}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true">
+                            <Border.BorderBrush>
+                                <SolidColorBrush x:Name="BrBrush" Color="#FF515151" />
+                            </Border.BorderBrush>
+                            <Border.Background>
+                                <SolidColorBrush x:Name="BgBrush" Color="#FF333333" />
+                            </Border.Background>
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+								Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" 
+								SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+								VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                               />
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="BlackWindowStyle" TargetType="{x:Type Window}">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="WindowStyle" Value="None" />
+        <Setter Property="AllowsTransparency" Value="True" />
+        <Setter Property="Template" Value="{StaticResource BlackWindowTemplate}" />
+    </Style>
+    <Style x:Key="TheAwesomeXAMLimage" TargetType="{x:Type ContentControl}">
+        <!-- Add additional Setters Here -->
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ContentControl}">
+                    <Canvas x:Name="Camada_x0020_1">
+                        <Path Data="M7991 23628l-686 0c146,159 268,322 379,488 114,172 216,347 316,524l1 2 0 3c1,76 2,154 4,231 2,74 3,148 4,222l368 0 0 -1084 0 -10 10 0 3281 0 10 0 0 10 0 1084 2187 -5c43,-379 215,-719 471,-975 192,-192 431,-337 699,-415 149,-44 306,-68 469,-68 422,0 806,159 1097,420 292,262 489,627 536,1038l1824 0 0 -367 -341 0 -10 0 0 -10 0 -704 0 -10 10 0 341 0 0 -373 -10960 0 -10 0 0 -2zm-705 -20l705 0 0 -9133 0 -10 10 0 1051 0 9 0 1 9c97,1440 746,2728 1738,3654 985,920 2308,1483 3762,1483 1005,0 1947,-269 2758,-738 840,-486 1540,-1188 2024,-2030l19 -32 0 37 0 6771 0 10 -10 0 -370 0 0 1473 0 10 -10 0 -1836 0c6,55 8,111 8,167 0,454 -184,865 -482,1163 -298,298 -709,482 -1163,482 -454,0 -865,-184 -1163,-482 -298,-298 -482,-709 -482,-1163 0,-57 3,-112 8,-167l-2185 5 0 696 0 10 -10 0 -3281 0 -10 0 0 -10c0,-52 0,-96 0,-155 0,-98 1,-241 0,-540l-368 0 0 696 0 10 -10 0 -476 0c-83,228 -215,432 -383,600 -298,298 -709,482 -1163,482 -454,0 -865,-184 -1163,-482 -168,-168 -300,-373 -383,-602l-454 0 0 0 -2188 1 -10 0 0 -10 -11 -4231 0 -2 1 -2c397,-797 625,-1362 799,-1794 278,-689 421,-1042 892,-1459l1 -1 1 -1c336,-177 1293,-175 2141,-173 342,1 666,2 924,-9l4 0 3 3 374 361 338 0 10 0 0 10 0 4736 0 10 -10 0 -318 0 354 348zm725 0l10960 0 10 0 0 2 329 0 0 -327 -11300 0 0 326zm-344 519c-114,-171 -241,-339 -392,-502l-371 -365 -6 0 -905 0c-16,1 -31,3 -45,4 -718,66 -1236,341 -1561,773 -325,433 -457,1023 -403,1720 1,16 3,31 4,46l437 0c-59,-169 -91,-352 -91,-541 0,-454 184,-865 482,-1163 298,-298 709,-482 1163,-482 454,0 865,184 1163,482 298,298 482,709 482,1163 0,190 -32,373 -92,542l459 0 0 -696 0 0c-1,-76 -2,-154 -4,-231 -2,-77 -3,-153 -4,-229 -100,-176 -201,-350 -314,-521zm730 981c1,306 0,451 0,550 0,56 0,97 0,145l3261 0 0 -696 0 -10 0 -1074 -3261 0 0 1084 0 0zm5493 -4l-1 9 -6 0c-6,55 -9,111 -9,168 0,449 182,855 476,1149 294,294 700,476 1149,476 449,0 855,-182 1149,-476 294,-294 476,-700 476,-1149 0,-449 -182,-855 -476,-1149 -294,-294 -700,-476 -1149,-476 -161,0 -316,23 -463,67 -231,70 -441,189 -616,347 -290,261 -486,625 -530,1034zm5071 -398l0 -684 -331 0 0 684 331 0zm-13487 12l1081 0 10 0 0 10 0 1081 0 10 -10 0 -1081 0 -10 0 0 -10 0 -1081 0 -10 10 0zm1071 20l-1061 0 0 1061 1061 0 0 -1061zm-1475 -2567l704 0 10 0 0 10 0 352 0 10 -10 0 -704 0 -10 0 0 -10 0 -352 0 -10 10 0zm694 20l-684 0 0 332 684 0 0 -332zm-3621 -1106l387 0 0 -1090 0 -10 10 0 344 0 10 0 0 10 0 1100 0 344 0 10 -10 0 -741 0 -10 0 0 -10 0 -344 0 -10 10 0zm397 20l-387 0 0 324 721 0 0 -334 0 -1090 -324 0 0 1090 0 10 -10 0zm4700 -2581l-322 0 0 4716 322 0 0 -4716zm-342 4716l0 -4722 -371 -358c-258,11 -581,10 -921,9 -845,-2 -1798,-4 -2131,170 -467,414 -609,765 -886,1451 -175,432 -403,997 -799,1794l5 2031 345 0 10 0 0 10 0 1103 0 10 -10 0 -342 0 3 1065 2167 -1c-1,-16 -3,-30 -4,-44l0 0c-55,-701 79,-1296 407,-1733 328,-437 851,-715 1575,-781 17,-2 32,-3 46,-4l1 0 905 0zm8058 1477l1081 0 10 0 0 10 0 1081 0 10 -10 0 -1081 0 -10 0 0 -10 0 -1081 0 -10 10 0zm1071 20l-1061 0 0 1061 1061 0 0 -1061zm-527 1459c253,0 481,-102 647,-268 166,-166 268,-394 268,-647 0,-253 -102,-481 -268,-647 -166,-166 -394,-268 -647,-268 -253,0 -481,102 -647,268 -166,166 -268,394 -268,647 0,253 102,481 268,647 166,166 394,268 647,268zm661 -254c-169,169 -403,274 -661,274 -258,0 -492,-105 -661,-274 -169,-169 -274,-403 -274,-661 0,-258 105,-492 274,-661 169,-169 403,-274 661,-274 258,0 492,105 661,274 169,169 274,403 274,661 0,258 -105,492 -274,661zm-7118 -11457l-1031 0 0 8777 11300 0 0 -6324c-484,807 -1167,1481 -1982,1952 -814,471 -1759,741 -2768,741 -1459,0 -2787,-565 -3775,-1489 -993,-928 -1644,-2217 -1743,-3658zm10299 2401l-11 19 0 6358 11 0 0 -6377zm0 6724l0 -327 -11 0 0 327 11 0zm-13364 2566c253,0 481,-102 647,-268 166,-166 268,-394 268,-647 0,-253 -102,-481 -268,-647 -166,-166 -394,-268 -647,-268 -253,0 -481,102 -647,268 -166,166 -268,394 -268,647 0,253 102,481 268,647 166,166 394,268 647,268zm661 -254c-169,169 -403,274 -661,274 -258,0 -492,-105 -661,-274 -169,-169 -274,-403 -274,-661 0,-258 105,-492 274,-661 169,-169 403,-274 661,-274 258,0 492,105 661,274 169,169 274,403 274,661 0,258 -105,492 -274,661zm-4844 -2287l3 1083 332 0 0 -1083 -335 0zm4183 3250c449,0 855,-182 1149,-476 294,-294 476,-700 476,-1149 0,-449 -182,-855 -476,-1149 -294,-294 -700,-476 -1149,-476 -449,0 -855,182 -1149,476 -294,294 -476,700 -476,1149 0,449 182,855 476,1149 294,294 700,476 1149,476zm179 -5892c-124,200 -614,310 -1155,371 -538,61 -1128,75 -1453,80l-1 0 -1 0c-171,-23 -266,-122 -306,-266 -33,-119 -29,-268 1,-431 30,-162 84,-338 151,-510 200,-513 514,-996 615,-996l1946 -12c34,0 63,5 89,13 37,12 66,32 86,53 20,22 31,47 31,69 0,6 -1,12 -2,18l0 1606 0 3 -1 2zm-1157 351c533,-61 1017,-168 1139,-359l0 -1604 0 -2 0 -1c1,-4 2,-8 2,-13 0,-17 -9,-37 -26,-55 -17,-19 -43,-37 -77,-48 -24,-8 -51,-12 -83,-12l-1946 12c-95,1 -400,477 -597,984 -67,171 -121,346 -150,507 -29,160 -34,307 -1,422 38,136 127,229 289,251 324,-6 912,-19 1450,-80z"/>
+                        <Ellipse Fill="#00A859" Height="40" Width="40"/>
+                        <Path Fill="#FEFEFE" Data="M11506 14560c-176,-213 -146,-528 66,-704 213,-176 527,-146 703,66l1771 2137 2817 -4231c152,-230 462,-293 691,-141 230,152 293,462 141,692l-3177 4772c-28,48 -65,91 -110,128 -213,176 -527,146 -703,-66l-2199 -2654z"/>
+                        <Path Fill="#4B4B4D" Data="M17133 25281c0,-903 -732,-1634 -1634,-1634 -160,0 -315,23 -461,66 -621,185 -1087,729 -1158,1391l-6 0c-6,58 -10,118 -10,177 0,903 732,1634 1634,1634 903,0 1634,-732 1634,-1634zm-1634 -925c511,0 925,414 925,925 0,511 -414,925 -925,925 -511,0 -925,-414 -925,-925 0,-511 414,-925 925,-925z"/>
+                        <Path Fill="#4B4B4D" Data="M7612 25261c0,-903 -732,-1634 -1634,-1634 -903,0 -1634,732 -1634,1634 0,903 732,1634 1634,1634 903,0 1634,-732 1634,-1634zm-1634 -925c511,0 925,414 925,925 0,511 -414,925 -925,925 -511,0 -925,-414 -925,-925 0,-511 414,-925 925,-925z"/>
+                        <Path Fill="#4B4B4D" Data="M8387 24014l0 1094c1,489 -1,566 0,705l3281 0 0 -706 0 -1094 -3281 0z"/>
+                        <Polygon Fill="#4B4B4D" Points="14955,24727 14955,25808 16037,25808 16037,24727"/>
+                        <Polygon Fill="#4B4B4D" Points="6556,25810 6556,24729 5474,24729 5474,25810"/>
+                        <Polygon Fill="#4B4B4D" Points="8001,23618 18971,23618 18971,23620 19320,23620 19320,23273 8001,23273"/>
+                        <Polygon Fill="#4B4B4D" Points="7250,23250 7250,18514 6908,18514 6908,23250"/>
+                        <Polygon Fill="#4B4B4D" Points="2884,21439 2884,21096 2884,19996 2540,19996 2540,21096 2143,21096 2143,21439"/>
+                        <Polygon Fill="#4B4B4D" Points="5070,22182 5070,22534 5775,22534 5775,22182"/>
+                        <Path Fill="#0978B8" Data="M8001 14475l0 8797 11320 0 0 -6370c-961,1628 -2732,2719 -4759,2719 -2924,0 -5316,-2272 -5510,-5147l-1051 0z"/>
+                        <Polygon Fill="#ED3237" Points="18620,24012 18620,24716 18971,24716 18971,24012"/>
+                        <Polygon Fill="#F58634" Points="2140,24728 2140,23625 1785,23625 1788,24728"/>
+                        <Path Fill="#FFCC00" Data="M3548 21434c-858,-117 256,-2182 460,-2183l1946 -12c140,-1 210,91 193,141l0 1607c-244,393 -1950,435 -2600,446zm3359 1816l0 -4736 -377 -364c-898,38 -2592,-66 -3062,182 -765,677 -661,1186 -1689,3250l5 2043 355 0 0 1103 -352 0 3 1085 2188 -1c-132,-1442 521,-2445 2014,-2562l915 0zm-1837 -716l0 -352 704 0 0 352 -704 0zm-2186 -2538l0 1100 0 344 -741 0 0 -344 397 0 0 -1100 344 0z"/>
+                        <Path Fill="#848688" Data="M5977 24336c-511,0 -925,414 -925,925 0,511 414,925 925,925 511,0 925,-414 925,-925 0,-511 -414,-925 -925,-925zm-503 1474l0 -1081 1081 0 0 1081 -1081 0z"/>
+                        <Path Fill="#848688" Data="M15499 24356c-511,0 -925,414 -925,925 0,511 414,925 925,925 511,0 925,-414 925,-925 0,-511 -414,-925 -925,-925zm-544 1453l0 -1081 1081 0 0 1081 -1081 0z"/>
+                        <Path Fill="#848688" Data="M6148 20988l0 -1607c17,-51 -53,-142 -193,-141l-1946 12c-204,1 -1318,2067 -460,2183 649,-11 2355,-54 2600,-446z"/>
+                        <Path Fill="#848688" Data="M7989 25108l0 0zm-1092 -1848l-905 0 -45 4c-718,66 -1236,341 -1561,773 -325,433 -457,1023 -403,1720l4 46 437 0c-59,-169 -91,-352 -91,-541 0,-454 184,-865 482,-1163 298,-298 709,-482 1163,-482 454,0 865,184 1163,482 298,298 482,709 482,1163 0,190 -32,373 -92,542l459 0 0 -696c-1,-76 -2,-154 -4,-231 -2,-77 -3,-153 -4,-229 -100,-176 -201,-350 -314,-521 -114,-171 -241,-339 -392,-502l-371 -365 -6 0z"/>
+                    </Canvas>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="BlackListBoxStyle" TargetType="{x:Type ListBox}">
+        <Setter Property="Background" Value="{StaticResource Fundo}" />
+        <Setter Property="BorderBrush" Value="{StaticResource Borda}" />
+        <Setter Property="Foreground" Value="{StaticResource TextoEnabled}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto" />
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto" />
+        <Setter Property="ScrollViewer.CanContentScroll" Value="True" />
+        <Setter Property="ScrollViewer.PanningMode" Value="Both" />
+        <Setter Property="Stylus.IsFlicksEnabled" Value="False" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListBox}">
+                    <Border x:Name="Border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Padding="1" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                        <ScrollViewer x:Name="Content" Focusable="False" Padding="{TemplateBinding Padding}">
+                            <ItemsPresenter />
+                        </ScrollViewer>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="Content" Property="Opacity" Value="0.35" />
+                        </Trigger>
+                        <Trigger Property="IsGrouping" Value="True">
+                            <Setter Property="ScrollViewer.CanContentScroll" Value="False" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="FocusTemplate" TargetType="{x:Type Border}">
+        <Setter Property="BorderBrush" Value="#FFF78A09"/>
+        <Setter Property="BorderThickness" Value="1" />
+    </Style>
+    <Style x:Key="BlackTextBoxStyle" TargetType="{x:Type TextBox}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="Foreground" Value="{StaticResource TextoEnabled}" />
+        <Setter Property="Background" Value="{StaticResource Fundo}" />
+        <Setter Property="BorderBrush" Value="{StaticResource Borda}" />
+        <Setter Property="SelectionBrush" Value="{StaticResource TextoSelecionado}" />
+        <Setter Property="CaretBrush" Value="#FFFFFFFF" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Padding" Value="4,3,4,3" />
+        <Setter Property="AllowDrop" Value="True" />
+        <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst" />
+        <Setter Property="Stylus.IsFlicksEnabled" Value="False" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Grid x:Name="Root" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                        <Grid x:Name="DefaultState">
+                            <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" />
+                        </Grid>
+                        <Grid x:Name="FocusedState" Opacity="0">
+                            <Border Style="{StaticResource FocusTemplate}" />
+                        </Grid>
+                        <ScrollViewer x:Name="PART_ContentHost" Padding="{TemplateBinding Padding}" Margin="1" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsReadOnly" Value="True">
+                            <Setter TargetName="PART_ContentHost" Property="Opacity" Value="0.75" />
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="FocusedState" Property="Opacity" Value="1" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="Root" Property="Opacity" Value="0.5" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="BlackMenuStyle" TargetType="{x:Type Menu}">
+        <Setter Property="OverridesDefaultStyle" Value="True"/>
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Menu}">
+                    <Border CornerRadius="3, 3, 3, 3" BorderBrush="{StaticResource Borda}" BorderThickness="1" Opacity="0.96" Background="{DynamicResource Fundo}">
+                        <StackPanel ClipToBounds="True" Orientation="Vertical" IsItemsHost="True"/>
+                    </Border>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="teste" TargetType="{x:Type DataGridRow}">
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type DataGridRow}">
+                    <Grid x:Name="DGR_Border"
+						SnapsToDevicePixels="True">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.Background>
+                            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                <GradientStop Offset="0" Color="#AAFFFFAA" />
+                                <GradientStop Offset="1" Color="#AAFFD455" />
+                            </LinearGradientBrush>
+                        </Grid.Background>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="Normal_AlternatingRow">
+                                    <Storyboard>
+                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border" Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[0].(GradientStop.Color)">
+                                            <EasingColorKeyFrame KeyTime="0" Value="#AAF0C570" />
+                                        </ColorAnimationUsingKeyFrames>
+                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border" Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
+                                            <EasingColorKeyFrame KeyTime="0" Value="#AAFF7F00" />
+                                        </ColorAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Normal_Selected">
+                                    <Storyboard>
+                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border" Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[0].(GradientStop.Color)">
+                                            <EasingColorKeyFrame KeyTime="0" Value="#CCAA0000" />
+                                        </ColorAnimationUsingKeyFrames>
+                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border" Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
+                                            <EasingColorKeyFrame KeyTime="0" Value="#77D52B00" />
+                                        </ColorAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border" Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[0].(GradientStop.Color)">
+                                            <EasingColorKeyFrame KeyTime="0" Value="#AAEA9595" />
+                                        </ColorAnimationUsingKeyFrames>
+                                        <ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border" Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
+                                            <EasingColorKeyFrame KeyTime="0" Value="#AAF54B4B" />
+                                        </ColorAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <SelectiveScrollingGrid>
+                            <SelectiveScrollingGrid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </SelectiveScrollingGrid.ColumnDefinitions>
+                            <SelectiveScrollingGrid.RowDefinitions>
+                                <RowDefinition Height="70" />
+                                <RowDefinition Height="Auto" />
+                            </SelectiveScrollingGrid.RowDefinitions>
+                            <DataGridCellsPresenter Grid.Column="1"
+								ItemsPanel="{TemplateBinding ItemsPanel}"
+								SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                            <DataGridDetailsPresenter Grid.Row="1"
+								Grid.Column="1"
+								SelectiveScrollingGrid.SelectiveScrollingOrientation="{Binding AreRowDetailsFrozen, ConverterParameter={x:Static SelectiveScrollingOrientation.Vertical}, Converter={x:Static DataGrid.RowDetailsScrollingConverter}, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
+								Visibility="{TemplateBinding DetailsVisibility}" />
+                            <DataGridRowHeader Grid.RowSpan="2"
+								SelectiveScrollingGrid.SelectiveScrollingOrientation="Vertical"
+								Visibility="{Binding HeadersVisibility, ConverterParameter={x:Static DataGridHeadersVisibility.Row}, Converter={x:Static DataGrid.HeadersVisibilityConverter}, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" />
+                        </SelectiveScrollingGrid>
+                        <Label Content="TESTE" Grid.Row="0" Grid.RowSpan="2" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="BlackLoginStyle" TargetType="{x:Type Window}">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="WindowStyle" Value="None" />
+        <Setter Property="AllowsTransparency" Value="True" />
+        <Setter Property="Template" Value="{StaticResource BlackLoginTemplate}" />
+    </Style>
+    <Style x:Key="dgvRowStyle" TargetType="{x:Type DataGridRow}">
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Background" Value="GhostWhite"/>
+        <Setter Property="FontWeight" Value="Normal"/>
+        <Setter Property="ContextMenu" Value="{x:Null}"/>
+        <Style.Triggers>
+            <Trigger Property="AlternationIndex" Value="1">
+                <Setter Property="Background" Value="#FFD0D0E0"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="#F9F99F"/>
+            </Trigger>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="Background" Value="#F9F99F" />
+            </Trigger>
+            <Trigger Property="Validation.HasError" Value="True" >
+                <Setter Property="Effect">
+                    <Setter.Value>
+                        <DropShadowEffect Color="Red" ShadowDepth="0" BlurRadius="20" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="BorderThickness" Value="2" />
+                <Setter Property="BorderBrush" Value="Red" />
+                <Setter Property="Foreground" Value="Blue" />
+                <Setter Property="FontSize" Value="12" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="dgvHeaderStyle" TargetType="{x:Type DataGridColumnHeader}">
+        <Setter Property="Background" Value="{DynamicResource HeaderBrush}" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="BorderBrush" Value="{DynamicResource HeaderBorderBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="MinWidth" Value="0" />
+        <Setter Property="MinHeight" Value="20" />
+        <Setter Property="Cursor" Value="Hand" />
+    </Style>
+    <Style x:Key="lblStyle" TargetType="{x:Type Label}">
+        <Setter Property="Background" Value="{DynamicResource HeaderBrush}" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="BorderBrush" Value="{DynamicResource HeaderBorderBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="MinWidth" Value="0" />
+        <Setter Property="MinHeight" Value="20" />
+    </Style>
+    <Style x:Key="dgvCenterCellStyle" TargetType="{x:Type DataGridCell}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type DataGridCell}">
+                    <Grid Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="tbiEventosStyleA" TargetType="{x:Type TabItem}">
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TabItem}">
+                    <Grid x:Name="grd">
+                        <Path x:Name="TabPath" StrokeThickness="0.5"
+							Margin="{Binding Converter={StaticResource ContentToMarginConverter}, ElementName=TabItemContent}"
+							Stroke="{DynamicResource TabUnselectedStrokeBrush}"
+							Fill="{DynamicResource TabUnselectedFillBrush}"
+							Data="{Binding Converter={StaticResource ContentToPathConverter}, ElementName=TabItemContent}">
+                            <Path.LayoutTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleY="-1" ScaleX="-1"/>
+                                    <SkewTransform AngleY="0" AngleX="0"/>
+                                    <RotateTransform Angle="180"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Path.LayoutTransform>
+                        </Path>
+                        <Rectangle x:Name="TabItemTopBorder" Height="2" Visibility="Hidden"
+							VerticalAlignment="Bottom" Fill="{StaticResource TbiBorder}"
+							Margin="{Binding Margin, ElementName=TabPath}" />
+                        <ContentPresenter x:Name="TabItemContent" ContentSource="Header"
+							Margin="10,2,0,2" VerticalAlignment="Center"
+							TextElement.Foreground="{StaticResource TbiFundo}" HorizontalAlignment="Center"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True" SourceName="grd">
+                            <Setter Property="Stroke" Value="{StaticResource TbiHover}" TargetName="TabPath"/>
+                        </Trigger>
+                        <Trigger Property="Selector.IsSelected" Value="True">
+                            <Setter Property="Fill" TargetName="TabPath">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="Gray"/>
+                                        <GradientStop Color="Red" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="Panel.ZIndex" Value="2"/>
+                            <Setter Property="Visibility" Value="Hidden" TargetName="TabItemTopBorder"/>
+                            <Setter Property="TextElement.Foreground" Value="{StaticResource TbiSelected}" TargetName="TabItemContent"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="listBoxItemStyle" TargetType="{x:Type ListBoxItem}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border Background="Transparent" BorderThickness="5" x:Name="Bd">
+                        <MDFe:ucChave/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Bd" Property="BorderBrush" Value="Transparent" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>
