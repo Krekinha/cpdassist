@@ -1048,11 +1048,11 @@ namespace CPDAssit
 
                 //SEGURO
                 mdfe.infMDFe.seg.infResp.respSeg = 2;
-                mdfe.infMDFe.seg.infResp.CNPJ = "06326025000166";
+                mdfe.infMDFe.seg.infResp.CNPJ = "";
                 mdfe.infMDFe.seg.infSeg.xSeg = "BUONNY PROJETOS";
-                mdfe.infMDFe.seg.infSeg.CNPJ = "06326025000166";
-                mdfe.infMDFe.seg.nApol = "87372016010621000195";
-                mdfe.infMDFe.seg.nAver = "581597026";
+                mdfe.infMDFe.seg.infSeg.CNPJ = "";
+                mdfe.infMDFe.seg.nApol = "";
+                mdfe.infMDFe.seg.nAver = "";
 
                 //TOTAIS
                 mdfe.infMDFe.tot.qNFe = nfsT.NFS.Count;
